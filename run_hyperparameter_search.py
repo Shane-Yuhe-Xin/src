@@ -64,9 +64,9 @@ training_args = TrainingArguments(
 ## and hyperparameters of your best run.from ray import tune
 from ray import tune
 from ray.tune.suggest.bayesopt import BayesOptSearch
-model = finetuning_utils.model_init()
+testmodel = finetuning_utils.model_init()
 trainer = Trainer(
-    model_init = model,
+    model = testmodel,
     args = training_args,
     train_dataset=train_data,
     eval_dataset=val_data,
