@@ -62,6 +62,7 @@ training_args = TrainingArguments(
 ## as its value.)
 ## Also print out the run ID, objective value,
 ## and hyperparameters of your best run.from ray import tune
+from ray import tune
 from ray.tune.suggest.bayesopt import BayesOptSearch
 model = finetuning_utils.model_init()
 trainer = Trainer(
